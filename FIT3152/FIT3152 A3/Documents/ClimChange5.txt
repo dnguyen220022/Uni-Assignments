@@ -1,0 +1,34 @@
+Technological innovation is needed if the world is to avert the most dangerous climate change scenarios.
+Innovation begins with research and development (R&D) but does not end there. AI can catalyze innovation by translating R&D into climate action.
+Generative AI’s capabilities for natural language processing, data synthesis and down-scaling and product prototyping can deliver practical tools to climate leaders.
+
+The world is making big bets on technology’s role in the climate crisis. Across the globe, scientists and technologists are pushing for the next wave of breakthroughs in climate adaptation and mitigation. And there is reason for optimism: recent years have seen meaningful progress, from weather forecasting to industrial decarbonization.
+
+History shows that we often underestimate the pace of scientific and technological progress and more breakthroughs are likely.
+
+But breakthroughs are not enough. The climate crisis cannot be solved inside a laboratory: impact comes when technological and scientific advances make it into the real world. Alongside pure science and research and development (R&D), climate leaders must focus on applicable results and “downstream” segments of the innovation cycle, such as product prototyping, localization and user engagement.
+
+AI and climate change
+The debut of Generative AI (GenAI) expanded the collective imagination of what AI can do. We already know that AI can drive scientific breakthroughs but can it go further? Leaders should explore how AI can act as a downstream catalyst in the innovation cycle, driving adoption of the latest tools and awareness of the latest science. Here are three places to start:
+
+1. Organizing unstructured Earth data and down-scaling models to local levels
+Earth science has been seen as “data messy” due to complex Earth systems and unstructured environmental data from observational methods. Recently, the volume of such data has exploded, with over 100 terabytes of satellite imagery collected daily. Yet, this doesn’t simplify the data’s unstructured nature. AI is key to organizing and down-scaling this vast data for local applications.
+
+Google’s Earth Engine is a leading Earth science platform integrating various satellite imagery and geospatial data with analytical capabilities. The platform enables users to visualize and analyze data related to forest cover, agricultural land, surface water and more. At a basic level, these capabilities are made possible by machine learning algorithms that organize vast amounts of unstructured data (specifically, by classifying the pixels in satellite imagery). A growing list of case studies exemplifies AI’s power to streamline Earth science – turning raw information into insight and impact.
+
+AI also enhances Earth science by down-scaling global models for local environments, using transfer learning that utilizes previously learned information about an area and improving tasks such as wildfire prediction in specific locations. This is crucial in data-scarce regions, helping bridge data gaps and operationalize extensive observational data.
+
+2. Building a ‘GPT’ interface to translate climate models into simple language
+Computer interfaces have remained largely unchanged for decades, involving user-initiated interactions such as entering search terms and reviewing results. GenAI, powered by large language models (LLMs), is revolutionizing this by facilitating conversational interactions. Users can directly communicate their needs to programmes like ChatGPT, which then perform tasks and synthesize insights, acting as a “co-pilot.”
+
+Climate models are integral to understanding complex climate dynamics. They involve multidimensional equations and can surpass 18,000 pages of code. These models are challenging for most users to comprehend. Yet, understanding these models is essential not just for scientists but also for business leaders, politicians, and citizens.
+
+GenAI could simplify this by providing a GPT-like interface enabling users of all backgrounds to interact with climate data relevant to their needs, such as monitoring local sea-level changes. This approach could make climate models more accessible and build trust in climate projections.
+
+3. Accelerating the prototyping phase of technology development
+AI is revolutionizing R&D in scientific domains, including climate change. However, the translation from fundamental research to tangible climate solutions is not always clear. The deep tech cycle – the path from research to prototype – can be lengthy and expensive. These concerns are particularly urgent, as we are “minutes to midnight” on breaking key warming thresholds.
+
+AI can shorten the deep tech cycle, particularly in prototyping, speeding up the introduction of essential technologies. In materials science, AI accelerates discovery and design, crucial for climate mitigation (such as improving lithium-ion batteries and solar cells) and adaptation (developing fire-resistant materials). Traditional methods, which calculate material properties from scratch, consume significant time, costs and computational resources. Up to one-third of global supercomputing power is used for materials science.
+
+AI now predicts new material properties without exhaustive initial calculations. It does this by learning relationships between atomic structures and their properties, and suggesting optimal configurations. While this is a nascent space with limitations (e.g. documented “hallucinations” in discovery processes), there is significant potential for innovation. For example, GenAI is tackling the inverse design problem, which starts with a desired property (e.g. resilience to extreme weather) and reverse-engineers its design.
+

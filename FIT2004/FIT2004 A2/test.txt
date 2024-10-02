@@ -1,0 +1,15 @@
+word: a
+frequency: 2302
+definition: flkrjpwiwoolykwb
+
+word: ab
+frequency: 2746
+definition: yclyaggjntmo
+
+word: abb
+frequency: 2746
+definition: yclyaggjntmo
+
+word: abbb
+frequency: 2746
+definition: yclyaggjntmo

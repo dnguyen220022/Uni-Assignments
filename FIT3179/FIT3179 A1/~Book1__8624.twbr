@@ -1,0 +1,2429 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0711.1636                               -->
+<workbook original-version='18.1' source-build='2024.2.1 (20242.24.0711.1636)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AllowCalculationsForDensifiedMarks.true...AllowCalculationsForDensifiedMarks />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.IndividualControlFormatting.true...IndividualControlFormatting />
+    <_.fcp.LayerControlWidget.true...LayerControlWidget />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://vizhub/workbooks/Book1_17247366692780?rev=1.6' id='Book1_17247366692780' path='/workbooks' revision='1.6' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='cleanedPedCount.csv+ (Multiple Connections)' inline='true' name='federated.1l60rq11kug91s1eke4k60t89xqu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cleanedPedCount' name='textscan.0x9jgsx13osd6r1bx0n7a19ve1dn'>
+            <connection class='textscan' directory='Data/datasets' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='cleanedClimate' name='textscan.1qsnz4m15gnt5y1ap6g0u01lbu7e'>
+            <connection class='textscan' directory='Data/datasets' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0x9jgsx13osd6r1bx0n7a19ve1dn' name='cleanedCO2.csv' table='[cleanedCO2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='dev_id' ordinal='1' />
+            <column datatype='string' name='sensor_name' ordinal='2' />
+            <column datatype='date' name='date' ordinal='3' />
+            <column datatype='string' name='time' ordinal='4' />
+            <column datatype='real' name='temperature' ordinal='5' />
+            <column datatype='integer' name='humidity' ordinal='6' />
+            <column datatype='integer' name='light' ordinal='7' />
+            <column datatype='integer' name='motion' ordinal='8' />
+            <column datatype='integer' name='visit' ordinal='9' />
+            <column datatype='integer' name='vdd' ordinal='10' />
+            <column datatype='string' name='lat_long' ordinal='11' />
+            <column datatype='integer' name='co2' ordinal='12' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0x9jgsx13osd6r1bx0n7a19ve1dn' name='cleanedPedCount.csv' table='[cleanedPedCount#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='sensor_name' ordinal='1' />
+              <column datatype='date' name='date' ordinal='2' />
+              <column datatype='datetime' date-parse-format='HH:mm:ssZZZZZ' name='time' ordinal='3' />
+              <column datatype='integer' name='locationid' ordinal='4' />
+              <column datatype='integer' name='direction_1' ordinal='5' />
+              <column datatype='integer' name='direction_2' ordinal='6' />
+              <column datatype='integer' name='total_of_directions' ordinal='7' />
+              <column datatype='string' name='location' ordinal='8' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0x9jgsx13osd6r1bx0n7a19ve1dn' name='cleanedCO2.csv' table='[cleanedCO2#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='dev_id' ordinal='1' />
+              <column datatype='string' name='sensor_name' ordinal='2' />
+              <column datatype='date' name='date' ordinal='3' />
+              <column datatype='string' name='time' ordinal='4' />
+              <column datatype='real' name='temperature' ordinal='5' />
+              <column datatype='integer' name='humidity' ordinal='6' />
+              <column datatype='integer' name='light' ordinal='7' />
+              <column datatype='integer' name='motion' ordinal='8' />
+              <column datatype='integer' name='visit' ordinal='9' />
+              <column datatype='integer' name='vdd' ordinal='10' />
+              <column datatype='string' name='lat_long' ordinal='11' />
+              <column datatype='integer' name='co2' ordinal='12' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0x9jgsx13osd6r1bx0n7a19ve1dn' name='cleanedClimate.csv' table='[cleanedClimate#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='date' ordinal='1' />
+              <column datatype='string' name='time' ordinal='2' />
+              <column datatype='string' name='dev_id' ordinal='3' />
+              <column datatype='string' name='Sensor.Name' ordinal='4' />
+              <column datatype='real' name='temperature' ordinal='5' />
+              <column datatype='real' name='humidity' ordinal='6' />
+              <column datatype='integer' name='battery' ordinal='7' />
+              <column datatype='string' name='Lat.Long' ordinal='8' />
+              <column datatype='string' name='Location.Picture.Hyperlink' ordinal='9' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[F1 (cleanedCO2.csv)]' value='[cleanedCO2.csv].[F1]' />
+          <map key='[F1 (cleanedClimate.csv)]' value='[cleanedClimate.csv].[F1]' />
+          <map key='[F1]' value='[cleanedPedCount.csv].[F1]' />
+          <map key='[Lat.Long]' value='[cleanedClimate.csv].[Lat.Long]' />
+          <map key='[Location.Picture.Hyperlink]' value='[cleanedClimate.csv].[Location.Picture.Hyperlink]' />
+          <map key='[Sensor.Name]' value='[cleanedClimate.csv].[Sensor.Name]' />
+          <map key='[battery]' value='[cleanedClimate.csv].[battery]' />
+          <map key='[co2]' value='[cleanedCO2.csv].[co2]' />
+          <map key='[date (cleanedCO2.csv)]' value='[cleanedCO2.csv].[date]' />
+          <map key='[date (cleanedClimate.csv)]' value='[cleanedClimate.csv].[date]' />
+          <map key='[date]' value='[cleanedPedCount.csv].[date]' />
+          <map key='[dev_id (cleanedCO2.csv)]' value='[cleanedCO2.csv].[dev_id]' />
+          <map key='[dev_id]' value='[cleanedClimate.csv].[dev_id]' />
+          <map key='[direction_1]' value='[cleanedPedCount.csv].[direction_1]' />
+          <map key='[direction_2]' value='[cleanedPedCount.csv].[direction_2]' />
+          <map key='[humidity (cleanedCO2.csv)]' value='[cleanedCO2.csv].[humidity]' />
+          <map key='[humidity]' value='[cleanedClimate.csv].[humidity]' />
+          <map key='[lat_long]' value='[cleanedCO2.csv].[lat_long]' />
+          <map key='[light]' value='[cleanedCO2.csv].[light]' />
+          <map key='[location]' value='[cleanedPedCount.csv].[location]' />
+          <map key='[locationid]' value='[cleanedPedCount.csv].[locationid]' />
+          <map key='[motion]' value='[cleanedCO2.csv].[motion]' />
+          <map key='[sensor_name (cleanedCO2.csv)]' value='[cleanedCO2.csv].[sensor_name]' />
+          <map key='[sensor_name]' value='[cleanedPedCount.csv].[sensor_name]' />
+          <map key='[temperature (cleanedCO2.csv)]' value='[cleanedCO2.csv].[temperature]' />
+          <map key='[temperature]' value='[cleanedClimate.csv].[temperature]' />
+          <map key='[time (cleanedCO2.csv)]' value='[cleanedCO2.csv].[time]' />
+          <map key='[time (cleanedClimate.csv)]' value='[cleanedClimate.csv].[time]' />
+          <map key='[time]' value='[cleanedPedCount.csv].[time]' />
+          <map key='[total_of_directions]' value='[cleanedPedCount.csv].[total_of_directions]' />
+          <map key='[vdd]' value='[cleanedCO2.csv].[vdd]' />
+          <map key='[visit]' value='[cleanedCO2.csv].[visit]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleanedPedCount.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleanedClimate.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[cleanedPedCount.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sensor_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sensor_name]</local-name>
+            <parent-name>[cleanedPedCount.csv]</parent-name>
+            <remote-alias>sensor_name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[cleanedPedCount.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[time]</local-name>
+            <parent-name>[cleanedPedCount.csv]</parent-name>
+            <remote-alias>time</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>locationid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[locationid]</local-name>
+            <parent-name>[cleanedPedCount.csv]</parent-name>
+            <remote-alias>locationid</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>direction_1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[direction_1]</local-name>
+            <parent-name>[cleanedPedCount.csv]</parent-name>
+            <remote-alias>direction_1</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>direction_2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[direction_2]</local-name>
+            <parent-name>[cleanedPedCount.csv]</parent-name>
+            <remote-alias>direction_2</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_of_directions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_of_directions]</local-name>
+            <parent-name>[cleanedPedCount.csv]</parent-name>
+            <remote-alias>total_of_directions</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[location]</local-name>
+            <parent-name>[cleanedPedCount.csv]</parent-name>
+            <remote-alias>location</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1 (cleanedCO2.csv)]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dev_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dev_id (cleanedCO2.csv)]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>dev_id</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sensor_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sensor_name (cleanedCO2.csv)]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>sensor_name</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date (cleanedCO2.csv)]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[time (cleanedCO2.csv)]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>time</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>temperature</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[temperature (cleanedCO2.csv)]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>temperature</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>humidity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[humidity (cleanedCO2.csv)]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>humidity</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>light</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[light]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>light</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>motion</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[motion]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>motion</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visit</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[visit]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>visit</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vdd</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[vdd]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>vdd</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lat_long</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[lat_long]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>lat_long</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[co2]</local-name>
+            <parent-name>[cleanedCO2.csv]</parent-name>
+            <remote-alias>co2</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1 (cleanedClimate.csv)]</local-name>
+            <parent-name>[cleanedClimate.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date (cleanedClimate.csv)]</local-name>
+            <parent-name>[cleanedClimate.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[time (cleanedClimate.csv)]</local-name>
+            <parent-name>[cleanedClimate.csv]</parent-name>
+            <remote-alias>time</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dev_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dev_id]</local-name>
+            <parent-name>[cleanedClimate.csv]</parent-name>
+            <remote-alias>dev_id</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sensor.Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sensor.Name]</local-name>
+            <parent-name>[cleanedClimate.csv]</parent-name>
+            <remote-alias>Sensor.Name</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>temperature</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[temperature]</local-name>
+            <parent-name>[cleanedClimate.csv]</parent-name>
+            <remote-alias>temperature</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>humidity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[humidity]</local-name>
+            <parent-name>[cleanedClimate.csv]</parent-name>
+            <remote-alias>humidity</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>battery</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[battery]</local-name>
+            <parent-name>[cleanedClimate.csv]</parent-name>
+            <remote-alias>battery</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lat.Long</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Lat.Long]</local-name>
+            <parent-name>[cleanedClimate.csv]</parent-name>
+            <remote-alias>Lat.Long</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location.Picture.Hyperlink</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Location.Picture.Hyperlink]</local-name>
+            <parent-name>[cleanedClimate.csv]</parent-name>
+            <remote-alias>Location.Picture.Hyperlink</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Day Of Week' datatype='string' name='[Calculation_1660420942427205634]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;,[date])' />
+      </column>
+      <column caption='climateDayOfWeek' datatype='string' name='[Calculation_1660420942427328515]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;,[date (cleanedClimate.csv)])' />
+      </column>
+      <column caption='averagePedCount' datatype='real' name='[Calculation_1660420942427906053]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([total_of_directions])' />
+      </column>
+      <column caption='Calculation1' datatype='real' name='[Calculation_1660420942429224967]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_1660420942427906053] - WINDOW_AVG([Calculation_1660420942427906053])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='AusTime' datatype='datetime' name='[Calculation_606860105730355200]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&quot;hour&quot;, 10, [time])' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='cleanedCO2.csv' datatype='table' name='[__tableau_internal_object_id__].[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='cleanedClimate.csv' datatype='table' name='[__tableau_internal_object_id__].[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='cleanedPedCount.csv' datatype='table' name='[__tableau_internal_object_id__].[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]' role='measure' type='quantitative' />
+      <column caption='Battery' datatype='integer' name='[battery]' role='measure' type='quantitative' />
+      <column caption='Co2' datatype='integer' name='[co2]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='dev id (cleanedCO2.csv)' datatype='string' name='[dev_id (cleanedCO2.csv)]' role='dimension' type='nominal' />
+      <column caption='Dev Id' datatype='string' name='[dev_id]' role='dimension' type='nominal' />
+      <column caption='Direction 1' datatype='integer' name='[direction_1]' role='measure' type='quantitative' />
+      <column caption='Direction 2' datatype='integer' name='[direction_2]' role='measure' type='quantitative' />
+      <column caption='Humidity' datatype='real' name='[humidity]' role='measure' type='quantitative' />
+      <column caption='Lat Long' datatype='string' name='[lat_long]' role='dimension' type='nominal' />
+      <column caption='Light' datatype='integer' name='[light]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' datatype-customized='true' name='[location - Split 1]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+        <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 1 ) ))' />
+      </column>
+      <column aggregation='Avg' caption='Longitude' datatype='real' datatype-customized='true' name='[location - Split 2]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+        <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 2 ) ))' />
+      </column>
+      <column caption='Location' datatype='string' default-role='measure' default-type='ordinal' name='[location]' role='dimension' type='nominal' />
+      <column caption='Locationid' datatype='integer' name='[locationid]' role='measure' type='quantitative' />
+      <column caption='Motion' datatype='integer' name='[motion]' role='measure' type='quantitative' />
+      <column caption='sensor name (cleanedCO2.csv)' datatype='string' name='[sensor_name (cleanedCO2.csv)]' role='dimension' type='nominal' />
+      <column caption='Sensor Name' datatype='string' name='[sensor_name]' role='dimension' type='nominal' />
+      <column caption='Temperature' datatype='real' name='[temperature]' role='measure' type='quantitative' />
+      <column caption='Time' datatype='datetime' datatype-customized='true' name='[time]' role='dimension' type='ordinal' />
+      <column caption='Total Of Directions' datatype='integer' name='[total_of_directions]' role='measure' type='quantitative' />
+      <column caption='Vdd' datatype='integer' name='[vdd]' role='measure' type='quantitative' />
+      <column caption='Visit' datatype='integer' name='[visit]' role='measure' type='quantitative' />
+      <column-instance column='[location - Split 1]' derivation='None' name='[none:location - Split 1:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[location - Split 2]' derivation='None' name='[none:location - Split 2:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Day Of Week)' hidden='true' name='[Action (Day Of Week)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_1660420942427205634]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Latitude,Longitude,Sensor Name)' hidden='true' name='[Action (Latitude,Longitude,Sensor Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:location - Split 1:ok]' />
+          <groupfilter function='level-members' level='[none:location - Split 2:ok]' />
+          <groupfilter function='level-members' level='[sensor_name]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='false' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/Datasources/cleanedPedCount.csv+ (Multiple Connections).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username=''>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E' table='[Extract].[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4' table='[Extract].[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]' type='table' />
+            <relation name='cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E' table='[Extract].[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]' type='table' />
+            <relation name='cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA' table='[Extract].[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[F1 (cleanedCO2.csv)]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[F1]' />
+            <map key='[F1 (cleanedClimate.csv)]' value='[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA].[F1]' />
+            <map key='[F1]' value='[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4].[F1]' />
+            <map key='[Lat.Long]' value='[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA].[Lat.Long]' />
+            <map key='[Location.Picture.Hyperlink]' value='[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA].[Location.Picture.Hyperlink]' />
+            <map key='[Sensor.Name]' value='[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA].[Sensor.Name]' />
+            <map key='[battery]' value='[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA].[battery]' />
+            <map key='[co2]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[co2]' />
+            <map key='[date (cleanedCO2.csv)]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[date]' />
+            <map key='[date (cleanedClimate.csv)]' value='[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA].[date]' />
+            <map key='[date]' value='[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4].[date]' />
+            <map key='[dev_id (cleanedCO2.csv)]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[dev_id]' />
+            <map key='[dev_id]' value='[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA].[dev_id]' />
+            <map key='[direction_1]' value='[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4].[direction_1]' />
+            <map key='[direction_2]' value='[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4].[direction_2]' />
+            <map key='[humidity (cleanedCO2.csv)]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[humidity]' />
+            <map key='[humidity]' value='[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA].[humidity]' />
+            <map key='[lat_long]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[lat_long]' />
+            <map key='[light]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[light]' />
+            <map key='[location]' value='[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4].[location]' />
+            <map key='[locationid]' value='[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4].[locationid]' />
+            <map key='[motion]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[motion]' />
+            <map key='[sensor_name (cleanedCO2.csv)]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[sensor_name]' />
+            <map key='[sensor_name]' value='[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4].[sensor_name]' />
+            <map key='[temperature (cleanedCO2.csv)]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[temperature]' />
+            <map key='[temperature]' value='[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA].[temperature]' />
+            <map key='[time (cleanedCO2.csv)]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[time]' />
+            <map key='[time (cleanedClimate.csv)]' value='[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA].[time]' />
+            <map key='[time]' value='[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4].[time]' />
+            <map key='[total_of_directions]' value='[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4].[total_of_directions]' />
+            <map key='[vdd]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[vdd]' />
+            <map key='[visit]' value='[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E].[visit]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cleanedPedCount.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>702266</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sensor_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[sensor_name]</local-name>
+              <parent-name>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</parent-name>
+              <remote-alias>sensor_name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cleanedPedCount.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>105</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cleanedPedCount.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>547</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[time]</local-name>
+              <parent-name>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</parent-name>
+              <remote-alias>time</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cleanedPedCount.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>locationid</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[locationid]</local-name>
+              <parent-name>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</parent-name>
+              <remote-alias>locationid</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cleanedPedCount.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>105</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>direction_1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[direction_1]</local-name>
+              <parent-name>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</parent-name>
+              <remote-alias>direction_1</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cleanedPedCount.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5015</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>direction_2</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[direction_2]</local-name>
+              <parent-name>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</parent-name>
+              <remote-alias>direction_2</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cleanedPedCount.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4986</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_of_directions</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_of_directions]</local-name>
+              <parent-name>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</parent-name>
+              <remote-alias>total_of_directions</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cleanedPedCount.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8361</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[location]</local-name>
+              <parent-name>[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]</parent-name>
+              <remote-alias>location</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cleanedPedCount.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>104</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1 (cleanedCO2.csv)]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>242460</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dev_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dev_id (cleanedCO2.csv)]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>dev_id</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sensor_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[sensor_name (cleanedCO2.csv)]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>sensor_name</remote-alias>
+              <ordinal>11</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date (cleanedCO2.csv)]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>12</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>4018</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>time</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[time (cleanedCO2.csv)]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>time</remote-alias>
+              <ordinal>13</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>199339</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>temperature</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[temperature (cleanedCO2.csv)]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>temperature</remote-alias>
+              <ordinal>14</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>426</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>humidity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[humidity (cleanedCO2.csv)]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>humidity</remote-alias>
+              <ordinal>15</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>142</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>light</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[light]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>light</remote-alias>
+              <ordinal>16</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1947</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>motion</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[motion]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>motion</remote-alias>
+              <ordinal>17</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>visit</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[visit]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>visit</remote-alias>
+              <ordinal>18</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vdd</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[vdd]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>vdd</remote-alias>
+              <ordinal>19</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lat_long</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[lat_long]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>lat_long</remote-alias>
+              <ordinal>20</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co2</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[co2]</local-name>
+              <parent-name>[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]</parent-name>
+              <remote-alias>co2</remote-alias>
+              <ordinal>21</ordinal>
+              <family>cleanedCO2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1423</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1 (cleanedClimate.csv)]</local-name>
+              <parent-name>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>22</ordinal>
+              <family>cleanedClimate.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42259</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date (cleanedClimate.csv)]</local-name>
+              <parent-name>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>23</ordinal>
+              <family>cleanedClimate.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1293</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>time</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[time (cleanedClimate.csv)]</local-name>
+              <parent-name>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</parent-name>
+              <remote-alias>time</remote-alias>
+              <ordinal>24</ordinal>
+              <family>cleanedClimate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>38105</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dev_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dev_id]</local-name>
+              <parent-name>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</parent-name>
+              <remote-alias>dev_id</remote-alias>
+              <ordinal>25</ordinal>
+              <family>cleanedClimate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sensor.Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sensor.Name]</local-name>
+              <parent-name>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</parent-name>
+              <remote-alias>Sensor.Name</remote-alias>
+              <ordinal>26</ordinal>
+              <family>cleanedClimate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>temperature</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[temperature]</local-name>
+              <parent-name>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</parent-name>
+              <remote-alias>temperature</remote-alias>
+              <ordinal>27</ordinal>
+              <family>cleanedClimate.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4442</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>humidity</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[humidity]</local-name>
+              <parent-name>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</parent-name>
+              <remote-alias>humidity</remote-alias>
+              <ordinal>28</ordinal>
+              <family>cleanedClimate.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7691</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>battery</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[battery]</local-name>
+              <parent-name>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</parent-name>
+              <remote-alias>battery</remote-alias>
+              <ordinal>29</ordinal>
+              <family>cleanedClimate.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lat.Long</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Lat.Long]</local-name>
+              <parent-name>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</parent-name>
+              <remote-alias>Lat.Long</remote-alias>
+              <ordinal>30</ordinal>
+              <family>cleanedClimate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Location.Picture.Hyperlink</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Location.Picture.Hyperlink]</local-name>
+              <parent-name>[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]</parent-name>
+              <remote-alias>Location.Picture.Hyperlink</remote-alias>
+              <ordinal>31</ordinal>
+              <family>cleanedClimate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Australia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='F1' />
+        <field-sort-custom-order field='sensor_name' />
+        <field-sort-custom-order field='date' />
+        <field-sort-custom-order field='Calculation_1660420942427205634' />
+        <field-sort-custom-order field='time' />
+        <field-sort-custom-order field='Calculation_606860105730355200' />
+        <field-sort-custom-order field='locationid' />
+        <field-sort-custom-order field='direction_1' />
+        <field-sort-custom-order field='direction_2' />
+        <field-sort-custom-order field='total_of_directions' />
+        <field-sort-custom-order field='location' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='cleanedCO2.csv' id='cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E'>
+            <properties context=''>
+              <relation connection='textscan.0x9jgsx13osd6r1bx0n7a19ve1dn' name='cleanedCO2.csv' table='[cleanedCO2#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='dev_id' ordinal='1' />
+                  <column datatype='string' name='sensor_name' ordinal='2' />
+                  <column datatype='date' name='date' ordinal='3' />
+                  <column datatype='string' name='time' ordinal='4' />
+                  <column datatype='real' name='temperature' ordinal='5' />
+                  <column datatype='integer' name='humidity' ordinal='6' />
+                  <column datatype='integer' name='light' ordinal='7' />
+                  <column datatype='integer' name='motion' ordinal='8' />
+                  <column datatype='integer' name='visit' ordinal='9' />
+                  <column datatype='integer' name='vdd' ordinal='10' />
+                  <column datatype='string' name='lat_long' ordinal='11' />
+                  <column datatype='integer' name='co2' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E' table='[Extract].[cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E]' type='table' />
+            </properties>
+          </object>
+          <object caption='cleanedClimate.csv' id='cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA'>
+            <properties context=''>
+              <relation connection='textscan.0x9jgsx13osd6r1bx0n7a19ve1dn' name='cleanedClimate.csv' table='[cleanedClimate#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='date' name='date' ordinal='1' />
+                  <column datatype='string' name='time' ordinal='2' />
+                  <column datatype='string' name='dev_id' ordinal='3' />
+                  <column datatype='string' name='Sensor.Name' ordinal='4' />
+                  <column datatype='real' name='temperature' ordinal='5' />
+                  <column datatype='real' name='humidity' ordinal='6' />
+                  <column datatype='integer' name='battery' ordinal='7' />
+                  <column datatype='string' name='Lat.Long' ordinal='8' />
+                  <column datatype='string' name='Location.Picture.Hyperlink' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA' table='[Extract].[cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA]' type='table' />
+            </properties>
+          </object>
+          <object caption='cleanedPedCount.csv' id='cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4'>
+            <properties context=''>
+              <relation connection='textscan.0x9jgsx13osd6r1bx0n7a19ve1dn' name='cleanedPedCount.csv' table='[cleanedPedCount#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='sensor_name' ordinal='1' />
+                  <column datatype='date' name='date' ordinal='2' />
+                  <column datatype='datetime' date-parse-format='HH:mm:ssZZZZZ' name='time' ordinal='3' />
+                  <column datatype='integer' name='locationid' ordinal='4' />
+                  <column datatype='integer' name='direction_1' ordinal='5' />
+                  <column datatype='integer' name='direction_2' ordinal='6' />
+                  <column datatype='integer' name='total_of_directions' ordinal='7' />
+                  <column datatype='string' name='location' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4' table='[Extract].[cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[date]' />
+              <expression op='[date (cleanedCO2.csv)]' />
+            </expression>
+            <first-end-point object-id='cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4' />
+            <second-end-point object-id='cleanedCO2.csv_A9DA7C407BE24C0F911432FC3F649E5E' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[date]' />
+              <expression op='[date (cleanedClimate.csv)]' />
+            </expression>
+            <first-end-point object-id='cleanedPedCount.csv_040B8778D8A846CCA6C01A2FF5ABCAA4' />
+            <second-end-point object-id='cleanedClimate.csv_F840A7CBBB22481ABA6FB73475DC74FA' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_6340D743F53B424EBCBF42EEE8FDF09B]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Data Viz 1' type='sheet' worksheet='CBD Map with Pedestrain Sensor Locations' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Data Viz 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_1AD17DCCB29B49C389114415C29E3FF2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Data Viz 1' type='sheet' worksheet='Difference from Avg. Pedestrian Count by Day' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Data Viz 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Avg. Pedestrian Count by Location and Day'>
+      <repository-location derived-from='https://vizhub/workbooks/Book1_17247366692780/Avg_PedestrianCountbyLocationandDay?rev=' id='105036361' path='/workbooks/Book1_17247366692780' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleanedPedCount.csv+ (Multiple Connections)' name='federated.1l60rq11kug91s1eke4k60t89xqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1l60rq11kug91s1eke4k60t89xqu'>
+            <column caption='Day Of Week' datatype='string' name='[Calculation_1660420942427205634]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;,[date])' />
+            </column>
+            <column-instance column='[total_of_directions]' derivation='Avg' name='[avg:total_of_directions:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' datatype-customized='true' name='[location - Split 1]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 1 ) ))' />
+            </column>
+            <column aggregation='Avg' caption='Longitude' datatype='real' datatype-customized='true' name='[location - Split 2]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 2 ) ))' />
+            </column>
+            <column caption='Location' datatype='string' default-role='measure' default-type='ordinal' name='[location]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1660420942427205634]' derivation='None' name='[none:Calculation_1660420942427205634:nk]' pivot='key' type='nominal' />
+            <column-instance column='[location - Split 1]' derivation='None' name='[none:location - Split 1:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[location - Split 2]' derivation='None' name='[none:location - Split 2:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[sensor_name]' derivation='None' name='[none:sensor_name:nk]' pivot='key' type='nominal' />
+            <column caption='Sensor Name' datatype='string' name='[sensor_name]' role='dimension' type='nominal' />
+            <column-instance column='[total_of_directions]' derivation='Sum' name='[sum:total_of_directions:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Of Directions' datatype='integer' name='[total_of_directions]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Day Of Week)]'>
+            <groupfilter function='level-members' level='[Calculation_1660420942427205634]' user:ui-action-filter='[Action2_1AD17DCCB29B49C389114415C29E3FF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6340D743F53B424EBCBF42EEE8FDF09B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:location - Split 1:ok]' />
+              <groupfilter function='level-members' level='[none:location - Split 2:ok]' />
+              <groupfilter function='level-members' level='[sensor_name]' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[sum:total_of_directions:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]</column>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Day Of Week)]</column>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[sum:total_of_directions:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' palette='blue_teal_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' value='Avg. Pedestrian Count&#10;'>
+              <formatted-text>
+                <run>Avg. Pedestrian Count&#10;</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1l60rq11kug91s1eke4k60t89xqu].[none:Calculation_1660420942427205634:nk]</rows>
+        <cols>[federated.1l60rq11kug91s1eke4k60t89xqu].[none:sensor_name:nk]</cols>
+      </table>
+      <simple-id uuid='{1800B053-E72F-4F92-8EE4-479D65D1A2CE}' />
+    </worksheet>
+    <worksheet name='CBD Map with Pedestrain Sensor Locations'>
+      <repository-location derived-from='https://vizhub/workbooks/Book1_17247366692780/CBDMapwithPedestrainSensorLocations?rev=' id='105036360' path='/workbooks/Book1_17247366692780' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleanedPedCount.csv+ (Multiple Connections)' name='federated.1l60rq11kug91s1eke4k60t89xqu' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1l60rq11kug91s1eke4k60t89xqu'>
+            <column caption='Day Of Week' datatype='string' name='[Calculation_1660420942427205634]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;,[date])' />
+            </column>
+            <column-instance column='[total_of_directions]' derivation='Avg' name='[avg:total_of_directions:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' datatype-customized='true' name='[location - Split 1]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 1 ) ))' />
+            </column>
+            <column aggregation='Avg' caption='Longitude' datatype='real' datatype-customized='true' name='[location - Split 2]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 2 ) ))' />
+            </column>
+            <column caption='Location' datatype='string' default-role='measure' default-type='ordinal' name='[location]' role='dimension' type='nominal' />
+            <column-instance column='[location - Split 1]' derivation='None' name='[none:location - Split 1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[location - Split 2]' derivation='None' name='[none:location - Split 2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sensor_name]' derivation='None' name='[none:sensor_name:nk]' pivot='key' type='nominal' />
+            <column caption='Sensor Name' datatype='string' name='[sensor_name]' role='dimension' type='nominal' />
+            <column caption='Total Of Directions' datatype='integer' name='[total_of_directions]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Day Of Week)]'>
+            <groupfilter function='level-members' level='[Calculation_1660420942427205634]' user:ui-action-filter='[Action2_1AD17DCCB29B49C389114415C29E3FF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Day Of Week)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[none:location - Split 2:qk]' field-type='quantitative' max='16137522.858631214' min='16136250.953453759' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[none:location - Split 1:qk]' field-type='quantitative' max='-4552893.6697385935' min='-4553925.1999864634' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' palette='blue_teal_10_0' type='interpolated' />
+          </style-rule>
+          <_.fcp.IndividualControlFormatting.true...style-rule element='legend'>
+            <_.fcp.IndividualControlFormatting.true...format attr='background-color' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' id='legend-size' value='#ffffff' />
+            <_.fcp.IndividualControlFormatting.true...format attr='border-width' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' id='legend-size' value='0' />
+            <_.fcp.IndividualControlFormatting.true...format attr='border-style' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' id='legend-size' value='none' />
+          </_.fcp.IndividualControlFormatting.true...style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' value='Avg. Pedestrian Count'>
+              <formatted-text>
+                <run>Avg. Pedestrian Count</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='streets' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' />
+              <lod column='[federated.1l60rq11kug91s1eke4k60t89xqu].[none:sensor_name:nk]' />
+              <color column='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1l60rq11kug91s1eke4k60t89xqu].[none:location - Split 1:qk]</rows>
+        <cols>[federated.1l60rq11kug91s1eke4k60t89xqu].[none:location - Split 2:qk]</cols>
+      </table>
+      <simple-id uuid='{9E11E476-0286-4EA7-857C-EA0D916AD6A5}' />
+    </worksheet>
+    <worksheet name='Climate Overview'>
+      <repository-location derived-from='https://vizhub/workbooks/Book1_17247366692780/ClimateOverview?rev=' id='105033464' path='/workbooks/Book1_17247366692780' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleanedPedCount.csv+ (Multiple Connections)' name='federated.1l60rq11kug91s1eke4k60t89xqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1l60rq11kug91s1eke4k60t89xqu'>
+            <column caption='Day Of Week' datatype='string' name='[Calculation_1660420942427205634]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;,[date])' />
+            </column>
+            <column-instance column='[co2]' derivation='Avg' name='[avg:co2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[humidity]' derivation='Avg' name='[avg:humidity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[temperature]' derivation='Avg' name='[avg:temperature:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_of_directions]' derivation='Avg' name='[avg:total_of_directions:qk]' pivot='key' type='quantitative' />
+            <column caption='Co2' datatype='integer' name='[co2]' role='measure' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Humidity' datatype='real' name='[humidity]' role='measure' type='quantitative' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' datatype-customized='true' name='[location - Split 1]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 1 ) ))' />
+            </column>
+            <column aggregation='Avg' caption='Longitude' datatype='real' datatype-customized='true' name='[location - Split 2]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 2 ) ))' />
+            </column>
+            <column caption='Location' datatype='string' default-role='measure' default-type='ordinal' name='[location]' role='dimension' type='nominal' />
+            <column-instance column='[location - Split 1]' derivation='None' name='[none:location - Split 1:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[location - Split 2]' derivation='None' name='[none:location - Split 2:ok]' pivot='key' type='ordinal' />
+            <column caption='Sensor Name' datatype='string' name='[sensor_name]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:qk]' pivot='key' type='quantitative' />
+            <column caption='Temperature' datatype='real' name='[temperature]' role='measure' type='quantitative' />
+            <column caption='Total Of Directions' datatype='integer' name='[total_of_directions]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Day Of Week)]'>
+            <groupfilter function='level-members' level='[Calculation_1660420942427205634]' user:ui-action-filter='[Action2_1AD17DCCB29B49C389114415C29E3FF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6340D743F53B424EBCBF42EEE8FDF09B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:location - Split 1:ok]' />
+              <groupfilter function='level-members' level='[none:location - Split 2:ok]' />
+              <groupfilter function='level-members' level='[sensor_name]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]</column>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Day Of Week)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' scope='cols' value='Avg. Pedestrian Count' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1l60rq11kug91s1eke4k60t89xqu].[tdy:date:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:temperature:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1l60rq11kug91s1eke4k60t89xqu].[tdy:date:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:humidity:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1l60rq11kug91s1eke4k60t89xqu].[tdy:date:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:co2:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1l60rq11kug91s1eke4k60t89xqu].[tdy:date:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>([federated.1l60rq11kug91s1eke4k60t89xqu].[avg:temperature:qk] + ([federated.1l60rq11kug91s1eke4k60t89xqu].[avg:humidity:qk] + [federated.1l60rq11kug91s1eke4k60t89xqu].[avg:co2:qk]))</rows>
+        <cols>[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]</cols>
+      </table>
+      <simple-id uuid='{29F0E8AD-CD02-4165-8E45-CC1E2AFF8E13}' />
+    </worksheet>
+    <worksheet name='Count vs CO2'>
+      <repository-location derived-from='https://vizhub/workbooks/Book1_17247366692780/CountvsCO2?rev=' id='105033461' path='/workbooks/Book1_17247366692780' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleanedPedCount.csv+ (Multiple Connections)' name='federated.1l60rq11kug91s1eke4k60t89xqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1l60rq11kug91s1eke4k60t89xqu'>
+            <column caption='Co2' datatype='integer' name='[co2]' role='measure' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' datatype-customized='true' name='[location - Split 1]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 1 ) ))' />
+            </column>
+            <column aggregation='Avg' caption='Longitude' datatype='real' datatype-customized='true' name='[location - Split 2]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 2 ) ))' />
+            </column>
+            <column caption='Location' datatype='string' default-role='measure' default-type='ordinal' name='[location]' role='dimension' type='nominal' />
+            <column-instance column='[location - Split 1]' derivation='None' name='[none:location - Split 1:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[location - Split 2]' derivation='None' name='[none:location - Split 2:ok]' pivot='key' type='ordinal' />
+            <column caption='Sensor Name' datatype='string' name='[sensor_name]' role='dimension' type='nominal' />
+            <column-instance column='[co2]' derivation='Sum' name='[sum:co2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_of_directions]' derivation='Sum' name='[sum:total_of_directions:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Of Directions' datatype='integer' name='[total_of_directions]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6340D743F53B424EBCBF42EEE8FDF09B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:location - Split 1:ok]' />
+              <groupfilter function='level-members' level='[none:location - Split 2:ok]' />
+              <groupfilter function='level-members' level='[sensor_name]' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[tdy:date:qk]' included-values='in-range'>
+            <min>#2023-03-31 00:00:00#</min>
+            <max>#2024-06-05 00:00:00#</max>
+          </filter>
+          <slices>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[tdy:date:qk]</column>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[sum:total_of_directions:qk]' scope='cols' value='Total Pedestrian Count' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1l60rq11kug91s1eke4k60t89xqu].[tdy:date:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.1l60rq11kug91s1eke4k60t89xqu].[sum:co2:qk]</rows>
+        <cols>[federated.1l60rq11kug91s1eke4k60t89xqu].[sum:total_of_directions:qk]</cols>
+      </table>
+      <simple-id uuid='{3DE8017E-2F63-4242-9653-6185851EE8B4}' />
+    </worksheet>
+    <worksheet name='Count vs Temp'>
+      <repository-location derived-from='https://vizhub/workbooks/Book1_17247366692780/CountvsTemp?rev=' id='105033460' path='/workbooks/Book1_17247366692780' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleanedPedCount.csv+ (Multiple Connections)' name='federated.1l60rq11kug91s1eke4k60t89xqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1l60rq11kug91s1eke4k60t89xqu'>
+            <column-instance column='[temperature]' derivation='Avg' name='[avg:temperature:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' datatype-customized='true' name='[location - Split 1]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 1 ) ))' />
+            </column>
+            <column aggregation='Avg' caption='Longitude' datatype='real' datatype-customized='true' name='[location - Split 2]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 2 ) ))' />
+            </column>
+            <column caption='Location' datatype='string' default-role='measure' default-type='ordinal' name='[location]' role='dimension' type='nominal' />
+            <column-instance column='[location - Split 1]' derivation='None' name='[none:location - Split 1:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[location - Split 2]' derivation='None' name='[none:location - Split 2:ok]' pivot='key' type='ordinal' />
+            <column caption='Sensor Name' datatype='string' name='[sensor_name]' role='dimension' type='nominal' />
+            <column-instance column='[total_of_directions]' derivation='Sum' name='[sum:total_of_directions:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:qk]' pivot='key' type='quantitative' />
+            <column caption='Temperature' datatype='real' name='[temperature]' role='measure' type='quantitative' />
+            <column caption='Total Of Directions' datatype='integer' name='[total_of_directions]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6340D743F53B424EBCBF42EEE8FDF09B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:location - Split 1:ok]' />
+              <groupfilter function='level-members' level='[none:location - Split 2:ok]' />
+              <groupfilter function='level-members' level='[sensor_name]' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[tdy:date:qk]' included-values='in-range'>
+            <min>#2023-03-31 00:00:00#</min>
+            <max>#2024-06-05 00:00:00#</max>
+          </filter>
+          <slices>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[tdy:date:qk]</column>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[sum:total_of_directions:qk]' scope='cols' value='Total Pedestrian Count' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1l60rq11kug91s1eke4k60t89xqu].[tdy:date:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:temperature:qk]</rows>
+        <cols>[federated.1l60rq11kug91s1eke4k60t89xqu].[sum:total_of_directions:qk]</cols>
+      </table>
+      <simple-id uuid='{15FC2E7E-C4FF-4267-A247-E9462F4F8C40}' />
+    </worksheet>
+    <worksheet name='Difference from Avg. Pedestrian Count by Day'>
+      <repository-location derived-from='https://vizhub/workbooks/Book1_17247366692780/DifferencefromAvg_PedestrianCountbyDay?rev=' id='105036358' path='/workbooks/Book1_17247366692780' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleanedPedCount.csv+ (Multiple Connections)' name='federated.1l60rq11kug91s1eke4k60t89xqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1l60rq11kug91s1eke4k60t89xqu'>
+            <column caption='Day Of Week' datatype='string' name='[Calculation_1660420942427205634]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;,[date])' />
+            </column>
+            <column caption='averagePedCount' datatype='real' name='[Calculation_1660420942427906053]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([total_of_directions])' />
+            </column>
+            <column caption='Calculation1' datatype='real' name='[Calculation_1660420942429224967]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_1660420942427906053] - WINDOW_AVG([Calculation_1660420942427906053])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' datatype-customized='true' name='[location - Split 1]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 1 ) ))' />
+            </column>
+            <column aggregation='Avg' caption='Longitude' datatype='real' datatype-customized='true' name='[location - Split 2]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 2 ) ))' />
+            </column>
+            <column caption='Location' datatype='string' default-role='measure' default-type='ordinal' name='[location]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1660420942427205634]' derivation='None' name='[none:Calculation_1660420942427205634:nk]' pivot='key' type='nominal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[location - Split 1]' derivation='None' name='[none:location - Split 1:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[location - Split 2]' derivation='None' name='[none:location - Split 2:ok]' pivot='key' type='ordinal' />
+            <column caption='Sensor Name' datatype='string' name='[sensor_name]' role='dimension' type='nominal' />
+            <column caption='Total Of Directions' datatype='integer' name='[total_of_directions]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1660420942429224967]' derivation='User' name='[usr:Calculation_1660420942429224967:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6340D743F53B424EBCBF42EEE8FDF09B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:location - Split 1:ok]' />
+              <groupfilter function='level-members' level='[none:location - Split 2:ok]' />
+              <groupfilter function='level-members' level='[sensor_name]' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[none:date:qk]' included-values='in-range'>
+            <min>#2023-03-31#</min>
+            <max>#2024-06-05#</max>
+          </filter>
+          <slices>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[none:date:qk]</column>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[usr:Calculation_1660420942429224967:qk]' scope='rows' value='Difference From Average  Pedestrian Count' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[none:Calculation_1660420942427205634:nk]' value='true' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+          <_.fcp.IndividualControlFormatting.true...style-rule element='quick-filter'>
+            <_.fcp.IndividualControlFormatting.true...format attr='background-color' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[none:date:qk]' value='#ffffff' />
+          </_.fcp.IndividualControlFormatting.true...style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1l60rq11kug91s1eke4k60t89xqu].[usr:Calculation_1660420942429224967:qk]</rows>
+        <cols>[federated.1l60rq11kug91s1eke4k60t89xqu].[none:Calculation_1660420942427205634:nk]</cols>
+      </table>
+      <simple-id uuid='{7D519F5E-D478-428A-838B-76491B9A766D}' />
+    </worksheet>
+    <worksheet name='Pedestrian Counts by Time of Day'>
+      <repository-location derived-from='https://vizhub/workbooks/Book1_17247366692780/PedestrianCountsbyTimeofDay?rev=' id='105033463' path='/workbooks/Book1_17247366692780' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleanedPedCount.csv+ (Multiple Connections)' name='federated.1l60rq11kug91s1eke4k60t89xqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1l60rq11kug91s1eke4k60t89xqu'>
+            <column caption='Day Of Week' datatype='string' name='[Calculation_1660420942427205634]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;,[date])' />
+            </column>
+            <column caption='AusTime' datatype='datetime' name='[Calculation_606860105730355200]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATEADD(&quot;hour&quot;, 10, [time])' />
+            </column>
+            <column-instance column='[total_of_directions]' derivation='Avg' name='[avg:total_of_directions:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_606860105730355200]' derivation='Hour' name='[hr:Calculation_606860105730355200:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' datatype-customized='true' name='[location - Split 1]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 1 ) ))' />
+            </column>
+            <column aggregation='Avg' caption='Longitude' datatype='real' datatype-customized='true' name='[location - Split 2]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 2 ) ))' />
+            </column>
+            <column caption='Location' datatype='string' default-role='measure' default-type='ordinal' name='[location]' role='dimension' type='nominal' />
+            <column-instance column='[location - Split 1]' derivation='None' name='[none:location - Split 1:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[location - Split 2]' derivation='None' name='[none:location - Split 2:ok]' pivot='key' type='ordinal' />
+            <column caption='Sensor Name' datatype='string' name='[sensor_name]' role='dimension' type='nominal' />
+            <column caption='Time' datatype='datetime' datatype-customized='true' name='[time]' role='dimension' type='ordinal' />
+            <column caption='Total Of Directions' datatype='integer' name='[total_of_directions]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Day Of Week)]'>
+            <groupfilter function='level-members' level='[Calculation_1660420942427205634]' user:ui-action-filter='[Action2_1AD17DCCB29B49C389114415C29E3FF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6340D743F53B424EBCBF42EEE8FDF09B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:location - Split 1:ok]' />
+              <groupfilter function='level-members' level='[none:location - Split 2:ok]' />
+              <groupfilter function='level-members' level='[sensor_name]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]</column>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Day Of Week)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' scope='rows' value='Avg. Pedestrain Count' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[hr:Calculation_606860105730355200:ok]' value='ih a' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]</rows>
+        <cols>[federated.1l60rq11kug91s1eke4k60t89xqu].[hr:Calculation_606860105730355200:ok]</cols>
+      </table>
+      <simple-id uuid='{3CDAD8C5-2224-45E6-BB85-8E2CBA0B001E}' />
+    </worksheet>
+    <worksheet name='Total Pedestrian Count by Day of Week'>
+      <repository-location derived-from='https://vizhub/workbooks/Book1_17247366692780/TotalPedestrianCountbyDayofWeek?rev=' id='105033457' path='/workbooks/Book1_17247366692780' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleanedPedCount.csv+ (Multiple Connections)' name='federated.1l60rq11kug91s1eke4k60t89xqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1l60rq11kug91s1eke4k60t89xqu'>
+            <column caption='Day Of Week' datatype='string' name='[Calculation_1660420942427205634]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;,[date])' />
+            </column>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1660420942427205634]' derivation='None' name='[none:Calculation_1660420942427205634:nk]' pivot='key' type='nominal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_of_directions]' derivation='Sum' name='[sum:total_of_directions:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Of Directions' datatype='integer' name='[total_of_directions]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[none:date:qk]' included-values='in-range'>
+            <min>#2023-03-31#</min>
+            <max>#2024-06-05#</max>
+          </filter>
+          <slices>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[none:date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1l60rq11kug91s1eke4k60t89xqu].[sum:total_of_directions:qk]</rows>
+        <cols>[federated.1l60rq11kug91s1eke4k60t89xqu].[none:Calculation_1660420942427205634:nk]</cols>
+      </table>
+      <simple-id uuid='{EE34A0B7-8E61-45B4-B0B5-DF4633D6995F}' />
+    </worksheet>
+    <worksheet name='Weekly Pedestrian Count'>
+      <repository-location derived-from='https://vizhub/workbooks/Book1_17247366692780/WeeklyPedestrianCount?rev=' id='105036357' path='/workbooks/Book1_17247366692780' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleanedPedCount.csv+ (Multiple Connections)' name='federated.1l60rq11kug91s1eke4k60t89xqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1l60rq11kug91s1eke4k60t89xqu'>
+            <column caption='Day Of Week' datatype='string' name='[Calculation_1660420942427205634]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATENAME(&apos;weekday&apos;,[date])' />
+            </column>
+            <column-instance column='[total_of_directions]' derivation='Avg' name='[avg:total_of_directions:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' datatype-customized='true' name='[location - Split 1]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 1 ) ))' />
+            </column>
+            <column aggregation='Avg' caption='Longitude' datatype='real' datatype-customized='true' name='[location - Split 2]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.1l60rq11kug91s1eke4k60t89xqu].[location]'>
+              <calculation class='tableau' formula='FLOAT(TRIM( SPLIT( [location], &quot;,&quot;, 2 ) ))' />
+            </column>
+            <column caption='Location' datatype='string' default-role='measure' default-type='ordinal' name='[location]' role='dimension' type='nominal' />
+            <column-instance column='[location - Split 1]' derivation='None' name='[none:location - Split 1:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[location - Split 2]' derivation='None' name='[none:location - Split 2:ok]' pivot='key' type='ordinal' />
+            <column caption='Sensor Name' datatype='string' name='[sensor_name]' role='dimension' type='nominal' />
+            <column caption='Total Of Directions' datatype='integer' name='[total_of_directions]' role='measure' type='quantitative' />
+            <column-instance column='[date]' derivation='Week-Trunc' name='[twk:date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Day Of Week)]'>
+            <groupfilter function='level-members' level='[Calculation_1660420942427205634]' user:ui-action-filter='[Action2_1AD17DCCB29B49C389114415C29E3FF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6340D743F53B424EBCBF42EEE8FDF09B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:location - Split 1:ok]' />
+              <groupfilter function='level-members' level='[none:location - Split 2:ok]' />
+              <groupfilter function='level-members' level='[sensor_name]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Latitude,Longitude,Sensor Name)]</column>
+            <column>[federated.1l60rq11kug91s1eke4k60t89xqu].[Action (Day Of Week)]</column>
+          </slices>
+          <aggregation value='true' />
+          <_.fcp.AllowCalculationsForDensifiedMarks.true...calcs-on-densified-marks value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[twk:date:qk]' scope='cols' value='Date' />
+            <format attr='title' class='0' field='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' scope='rows' value='Avg Pedestrian Count' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]</rows>
+        <cols>[federated.1l60rq11kug91s1eke4k60t89xqu].[twk:date:qk]</cols>
+      </table>
+      <simple-id uuid='{7E83B3F0-F6FF-4D71-829D-9AF20B19E012}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Data Viz 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Melbourne CBD Pedestrian Trends</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://vizhub/workbooks/Book1_17247366692780/DataViz1?rev=' id='105036362' path='/workbooks/Book1_17247366692780' revision='' />
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f5f5f5' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98734' id='34' param='horz' type-v2='layout-flow' w='99318' x='341' y='633'>
+            <zone h='98734' id='27' param='vert' type-v2='layout-flow' w='99318' x='341' y='633'>
+              <zone fixed-size='45' h='4193' id='28' is-fixed='true' type-v2='title' w='99318' x='341' y='633'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='94541' id='8' param='horz' type-v2='layout-flow' w='99318' x='341' y='4826'>
+                <zone fixed-size='1541' h='94541' id='6' is-fixed='true' type-v2='layout-basic' w='65602' x='341' y='4826'>
+                  <zone h='47269' id='15' name='CBD Map with Pedestrain Sensor Locations' w='28975' x='30581' y='4826'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='31516' id='17' name='Pedestrian Counts by Time of Day' w='30240' x='341' y='67851'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='31511' id='23' name='Difference from Avg. Pedestrian Count by Day' w='30240' x='341' y='4826'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='31514' id='25' name='Weekly Pedestrian Count' w='30240' x='341' y='36337'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47272' id='29' name='Avg. Pedestrian Count by Location and Day' w='28975' x='30581' y='52095'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47272' id='32' name='Avg. Pedestrian Count by Location and Day' pane-specification-id='2' param='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' type-v2='color' w='6387' x='59556' y='52095'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47269' id='35' name='CBD Map with Pedestrain Sensor Locations' pane-specification-id='0' param='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' type-v2='color' w='6387' x='59556' y='4826'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='94541' id='18' name='Climate Overview' w='33716' x='65943' y='4826'>
+                  <layout-cache minheight='399' minwidth='168' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>Melbourne CBD Pedestrian Trends</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1850' minheight='1850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='43' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98734' id='42' param='vert' type-v2='layout-flow' w='99330' x='335' y='633'>
+                <zone fixed-size='45' h='4193' id='28' type-v2='title' w='99330' x='335' y='633'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='244' h='31512' id='23' is-fixed='true' name='Difference from Avg. Pedestrian Count by Day' w='29736' x='335' y='4826'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='47270' id='15' is-fixed='true' name='CBD Map with Pedestrain Sensor Locations' w='28489' x='30071' y='4826'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='47270' id='35' name='CBD Map with Pedestrain Sensor Locations' pane-specification-id='0' param='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' type-v2='color' w='6279' x='58560' y='4826'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='94541' id='18' is-fixed='true' name='Climate Overview' w='34826' x='64839' y='4826'>
+                  <layout-cache minheight='399' minwidth='168' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='244' h='31514' id='25' is-fixed='true' name='Weekly Pedestrian Count' w='29736' x='335' y='36338'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='47271' id='29' is-fixed='true' name='Avg. Pedestrian Count by Location and Day' w='28489' x='30071' y='52096'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='47271' id='32' name='Avg. Pedestrian Count by Location and Day' pane-specification-id='2' param='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' type-v2='color' w='6279' x='58560' y='52096'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='244' h='31515' id='17' is-fixed='true' name='Pedestrian Counts by Time of Day' w='29736' x='335' y='67852'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{A8EB6048-C821-43C0-B095-94F8911E5AA4}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Total Pedestrian Count by Day of Week'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1l60rq11kug91s1eke4k60t89xqu].[none:date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F78EFCBF-ACEF-46F1-A12D-A4A079C6379C}' />
+    </window>
+    <window class='worksheet' name='Weekly Pedestrian Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{04BC9D56-5979-408A-97ED-D6A857825DC7}' />
+    </window>
+    <window class='worksheet' name='Difference from Avg. Pedestrian Count by Day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1l60rq11kug91s1eke4k60t89xqu].[none:date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6EDCF384-A97B-4C6A-B80A-D21096E0CDB1}' />
+    </window>
+    <window class='worksheet' name='Count vs Temp'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1l60rq11kug91s1eke4k60t89xqu].[tdy:date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{40826D2E-6C87-426A-9273-26A87103DF6D}' />
+    </window>
+    <window class='worksheet' name='Count vs CO2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2B03EBD5-C4D8-42EB-AEB6-25389AD85996}' />
+    </window>
+    <window class='worksheet' name='CBD Map with Pedestrain Sensor Locations'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <map-scale-visibility value='0' />
+        <default-map-unit-selection mapunit='1' />
+        <_.fcp.LayerControlWidget.true...layer-control toolbar-button-enabled='false' />
+      </viewpoint>
+      <simple-id uuid='{229063E4-878C-4A89-BB8D-D1229883C08F}' />
+    </window>
+    <window class='worksheet' name='Pedestrian Counts by Time of Day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6939139F-6391-46B2-804A-F445DF7AC16B}' />
+    </window>
+    <window class='worksheet' name='Climate Overview'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{539E7599-6611-4538-B8DE-361EAF961CC9}' />
+    </window>
+    <window class='worksheet' name='Avg. Pedestrian Count by Location and Day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.1l60rq11kug91s1eke4k60t89xqu].[avg:total_of_directions:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3595FCDD-3BAF-4631-9A94-89C900A91ADA}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Data Viz 1'>
+      <viewpoints>
+        <viewpoint name='Avg. Pedestrian Count by Location and Day'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='CBD Map with Pedestrain Sensor Locations'>
+          <zoom type='entire-view' />
+          <map-scale-visibility value='0' />
+          <default-map-unit-selection mapunit='1' />
+          <_.fcp.LayerControlWidget.true...layer-control toolbar-button-enabled='false' />
+        </viewpoint>
+        <viewpoint name='Climate Overview'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Difference from Avg. Pedestrian Count by Day'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Pedestrian Counts by Time of Day'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Weekly Pedestrian Count'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='15' />
+      <simple-id uuid='{EDAC476A-B5B9-444B-95E6-78AA3682F29B}' />
+    </window>
+  </windows>
+</workbook>

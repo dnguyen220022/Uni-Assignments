@@ -1,0 +1,10 @@
+Record Video
+
+Submission 1:
+pdf file
+
+Submission 2:
+zip file containing:
+	video
+	r code
+	dataset
